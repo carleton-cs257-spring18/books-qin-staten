@@ -1,0 +1,130 @@
+BooksDataSource Test Results, 17 April 2019
+
+Oliver Staten
+Professor Alexander
+CS257
+4/17/19
+test-results
+
+Other team:
+Nathan Rowley, Pilot Irwin
+
+1) Did their code pass their own tests?
+Yes, they passed their own tests.
+
+2) We had one distinct unusual issue that varied from the standard implementation of start files, etc.  This was that we used different books.csv files for this assignment; I used books.csv from stage 1, and they used
+the one from stage 2 and 3.
+
+3) 
+
+test_book_identity_true
+pass
+
+test_book_identity_false
+pass
+
+test_no_exist_large_book
+pass
+
+test_no_exist_large_book2
+fail
+We implemented the tests/code differently; they operated saying that the id simply wasn't there, whereas
+I said that there was a value error.
+
+test_bad_author_ID
+pass
+
+test_valid_author_ID
+pass
+
+test_valid_search_text_books
+pass
+
+test_nonexistent_search_text_books
+pass
+
+test_start_year_books
+fail
+The different csv files meant that the code returned additional items to what my test said it should.
+
+test_end_year_books
+fail
+Same "different csv files" issue.  
+
+test_impossible_end_start_year_books
+pass
+
+test_false_start_year_books
+pass
+
+test_false_end_year_books
+pass
+
+test_sort_by_books
+pass
+
+test_book_combo
+pass
+
+test_author_identity_true
+pass
+
+test_author_identity_false
+pass
+
+test_no_exist_negative_author
+pass
+
+test_no_exist_large_author
+fail
+Similar to the large book example above, we implemented our code differently; they chose to just return an
+empty array, I chose to raise a value error.
+
+test_bad_book_ID
+pass
+
+test_valid_book_ID
+pass
+
+test_valid_search_text_authors
+pass
+
+test_nonexistent_search_text_authors
+pass
+
+test_start_year_end_year_authors
+pass
+
+test_impossible_end_start_year_authors
+fail
+This test was designed so that there couldn't be the case that an author was both living during or after
+a year later than the year they were living before or during.  This case has a few interpretations; they
+chose the mechanical one, in which I suppose there could be a gap in their life in which they are living
+surrounding this gap.  However, I chose to treat this as an error of sorts, and thus wanted to return an
+empty array. 
+
+test_false_start_year_authors
+fail
+This test was designed to make sure that if the user entered a start year after 2019, it would return an
+empty array because we can't guarantee someone will be alive.  However, it appears that they implemented
+this delimiter so that any high start year would include "None" (ie hasn't died).
+
+test_false_end_year_authors
+pass
+
+test_sort_by_authors_last_name
+pass
+
+test_sort_by_authors_first_name
+fail
+I believe they didn't actually implement sorting by first name.  
+
+test_author_combo
+pass
+
+
+
+
+
+
+
