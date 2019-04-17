@@ -75,7 +75,7 @@ class BooksDataSourceTest(unittest.TestCase):
         print("test_start_year_books")
     
     def test_end_year_books(self):
-        self.assertEqual(self.book_checker.books(end_year=1813), [{'id': 18, 'title': 'Pride and Prejudice', 'publication_year': 1813}, {'id': 20, 'title': 'Sense and Sensibility', 'publication_year': 1813}])
+        self.assertEqual(self.book_checker.books(end_year=1813), [{'id': 18, 'title': 'Pride and Prejudice', 'publication_year': 1813}, {'id': 20, 'title': 'Sense and Sensibility', 'publication_year': 1813}, {'id': 30, 'title': 'The Life and Opinions of Tristram Shandy, Gentleman', 'publication_year': 1759}])
         print("test_end_year_books")
         
     def test_impossible_end_start_year_books(self):
