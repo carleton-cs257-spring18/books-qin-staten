@@ -45,9 +45,9 @@ class BooksDataSourceTest(unittest.TestCase):
         self.assertRaises(ValueError, self.book_checker.book, -14)
         print("test_no_exist_large_book")
 
-    def test_no_exist_large_book(self):
+    def test_no_exist_large_book2(self):
         self.assertRaises(ValueError, self.book_checker.book, 35)
-        print("test_no_exist_large_book")
+        print("test_no_exist_large_book2")
         
     """
     Tests for:
